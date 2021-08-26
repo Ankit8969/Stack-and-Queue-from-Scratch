@@ -1,0 +1,52 @@
+
+class Stack
+{
+private:
+    int pos;
+    vector<int> v;
+
+public:
+    Stack()
+    {
+        pos = -1;
+    }
+    void make_stack(int n)
+    {
+        v.resize(n);
+    }
+    void push(int x)
+    {
+        if (pos >= v.size())
+        {
+            cout << "Stack is Full" << endl;
+        }
+        else
+        {
+            pos++;
+            v[pos] = x;
+        }
+    }
+    void pop()
+    {
+        if (pos < 0)
+        {
+            cout << "Stack is Empty" << endl;
+        }
+        else
+        {
+            cout << v[pos] << endl;
+            pos--;
+        }
+    }
+    void top()
+    {
+        if (pos < 0)
+        {
+            cout << "Stack is Empty" << endl;
+        }
+        else
+        {
+            cout << "TOP element " << v[pos] << endl;
+        }
+    }
+};
